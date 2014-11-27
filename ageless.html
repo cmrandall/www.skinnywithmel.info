@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/tooltip.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function() {
+			$("li[class$=infoicon]").append("<img src='imgs/asterisk.jpg' align='absbottom' />")
+		});
+	</script>
+	<title> Ageless by Skinny Body Care </title>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header"> 
+			<h1> 
+				Skinny Body Care
+			</h1>
+		</div>
+		
+		<!-- Nav section -->
+
+		<ul class="navbar">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="products.html"> Products </a></li>
+			<li><a href="Social Media.html"> Social Media </a></li>
+			<li><a href="contact.html"> Contact </a></li>
+		</ul>
+
+		<!-- End nav section -->
+
+		<!-- Begin Content -->
+
+		<div id="productcontent">
+			<div class="skinnyfiber">
+				<h3> Ageless by Skinny Body Care </h3>
+			</div>
+
+			<div id="whatis">
+				<p>
+					<h4> What is Ageless? </h4> <br>
+					<p>
+						Ageless is a specially formulated moisturizer using the world's most effective anti-aging ingredients and offer the FIRST and ONLY product of its kind. Not only do the key ingredients help moisturize your skin, but they help in reversing the aging process and revitalize your skin back to its youthful radiance and beauty.
+					</p>
+					<p>
+						These ingredients condition the renewal and production of new cells, while helping to improve and eliminate skin imperfections including discoloration, age spots, and rough texture to reveal clearer, more radiant looking skin that continues to improve with each application.
+					</p>
+				</p>
+			</div>
+			
+
+			<img src="imgs/ageless.png" width="150" height="225" class="agelesspic">
+
+			<div class="skinnyfiber">
+				<p>
+					<h4> What makes up Ageless </h4>
+			    </p>
+
+			    <span id="ingredients">
+					<p> Key Formula Ingredients </p>
+						<ul class="changecolor">
+							<li class="infoicon">
+								<a class="tooltip" data-tip-type="html" data-tip-source="aloe"> 
+									Aloe Vera Gel & Aurantium Blend
+								</a>  
+							</li>
+							<li class="infoicon">
+								<a class="tooltip" data-tip-type="html" data-tip-source="elastin"> 
+									Hydrolyzed Elastin & Soluble Collagen
+								</a> 
+							</li>
+							<li class="infoicon">
+								<a class="tooltip" data-tip-type="html" data-tip-source="coq10"> 
+									CoQ10
+								</a>       
+							</li>
+							<li class="infoicon">
+								<a class="tooltip" data-tip-type="html" data-tip-source="allantoin">				 
+									Glycosaminoglycans, Panthenol & Allantoin 
+								</a>
+							</li>
+						</ul>
+					</p>
+				</span>
+				
+				<p class="asterisk">
+					<img src="imgs/asterisk.jpg" alt="picture of asterisk" height="13" width="13"> 
+					<em>mouse over for a short description</em>
+				</p> 				
+
+			</div>
+
+			<div class="fruitsveggies">
+				<p>
+					<h4> PLUS 12 Fresh Extracts fron Nature's Finest Fruits and Vegetables </h4>
+				</p>
+				<p>
+					Ageless uses a unique combination of natural extracts from vegetables and fruits to provide the maximum anti-oxidant and age defying blend of nutrients for the skin. Phytonutrients are known to be the strongest in the most colorful fruits and vegetables. Ageless uses a wide array of phytonutrients from 13 different fruits and vegetables in order to create the optimal formula.
+				</p>
+			</div>
+			
+			<img src="imgs/fruitsandveggies.jpg" width="700" height="200" id="fruitsandveggies">
+
+			<div style="clear: both;"></div>
+		</div>
+
+		
+		<div id="ordernow">
+			<p> 
+				Interested trying the product? Click the tag to the right for more information and to place your order towards a road to a better you!
+			</p>
+		</div>	
+			<a href="http://melrich31887.agelesshealthyskin.com" target="_blank" class="orderskinnyfiber">
+				<img src="imgs/ordernow.png" alt="link to order skinny fiber" width="150" height="50" id="ordernowimg">
+			</a>
+		
+		<div style="clear: both;"> </div>	
+
+		<!-- End Content -->
+
+
+		<!-- Start dialog section for jQuery -->
+
+    	<div class="tooltip-html-source">
+			<div id="aloe">
+					Natural moisturizing agents and skin conditioning agents. Promotes the production of new skin cells through increasing the macrophage function of the cells.
+			</div>
+			<div id="elastin">
+					Natural moisturizing agents and skin conditioning agents. Promotes the production of new skin cells through increasing the macrophage function of the cells.
+			</div>
+			<div id="coq10">
+					Coenzyme Q10 is similar to a viatmin made by your body. Your cells use it to produce energy for cell growth and maintenance and also acts as an antioxidant. CoQ10 is essential for electron transfer that takes place during cellular renewal and production
+			</div>
+			<div id="allantoin">
+					These nutrients moisturize and strengthen the skin by helping it retain natural nutrients such as Pro Vitamin B5. They have a combined keratolytic effect, increasing the water content of the extracellular matrix and enhancing the appearance of the skin by helping to firm and tighten your skin filling in wrinkles within minutes of application
+			</div>
+		</div>
+
+		<!-- End jQuery content -->
+
+		<!--     FOOTER      -->
+
+		<div id="footer">
+			<span class="email">E-mail: <a href="mailto:melissa.ann.rich@gmail.com"> melissa.ann.rich@gmail.com </a></span>
+			<span class="copyright">Copyright &copy; 2014 Melissa Rich</span>
+			<span> Website by: <a href="http://www.cmrandall.com" target="_blank"> Charles Randall</a></span>
+		</div>
+		
+		<div id="tooltip_container">
+			
+		</div>
+
+	</div>
+
+</body>
+</html>

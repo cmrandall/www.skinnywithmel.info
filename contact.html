@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function() {
+			$("a[id$=fb]").prepend("<img src='imgs/fb_icon1.jpg' align='absbottom' />")
+			$("a[id$=pin]").prepend("<img src='imgs/pinterest.jpg' align='absbottom' />")
+			$("a[id$=email]").prepend("<img src='imgs/envenlope.gif' align='absbottom' />")
+		});
+	</script>
+	<title> Melissa's Skinny Fiber </title>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="header"> 
+			<h1>
+				Skinny Body Care
+			</h1>
+		</div>
+		
+
+		<!-- Nav section -->
+
+		<ul class="navbar">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="products.html"> Products </a></li>
+			<li><a href="Social Media.html"> Social Media </a></li>
+			<li><a href="contact.html"> Contact </a></li>
+		</ul>
+	
+		<!-- End nav section -->
+		
+
+		<!-- Begin Content Section -->
+
+		<div id="waystocontact">
+			<h2 id="contactme"> Please feel free to contact me through any of the methods below </h2>
+		
+			<div id="contactForm">
+				<h3> Fill out the form below </h3>
+				<form action="formtoemailpro.php"  method="POST" name"contact form" id="contact-form" novalidate="novalidate">
+					  <div>
+					    <label for="name">Name:</label>
+					    <input type="text" id="name" name="name" class="required">
+					    <span>Please enter your name</span>
+					  </div>
+
+					  <div>
+					    <label for="email">E-mail:</label>
+					    <input type="text" id="email" name="email" class="required">
+					    <span>Please enter a valid e-mail</span>
+					  </div>
+
+					  <div>
+					    <label for="message">Message:</label>
+					    <textarea id="message" name="message" class="required"></textarea>
+					    <span>Please enter your message</span>
+					  </div>
+					 
+					  <div class="button">
+					    <button type="submit">Submit</button>
+					  </div>
+				</form> 
+			</div>
+
+			<div id="contactright">
+				<h3> Connect with me! </h3>
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/groups/livinghealthywithmel" target="_blank" id="fb">
+							Join my group on Facebook
+						</a>
+					</li>
+					<li>
+						<a href="http://www.pinterest.com/mrich1987/" target="_blank" id="pin">
+							Follow me on Pinterest
+						</a>
+					</li>
+					<li>
+						<a href="mailto:melissa.ann.rich@gmail.com"  id="email">
+							Send me an email
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+
+		<!-- End Content Section -->
+		
+		<!--     FOOTER      -->
+
+		<div id="footer">
+			<span class="email">E-mail: <a href="mailto:melissa.ann.rich@gmail.com"> melissa.ann.rich@gmail.com </a></span>
+			<span class="copyright">Copyright &copy; 2014 Melissa Rich</span>
+			<span> Website by: <a href="http://www.cmrandall.com" target="_blank"> Charles Randall</a></span>
+		</div>
+	</div>
+	
+
+	<!-- Begin jQuery Content -->
+
+	<script type="text/javascript" src="js/validEmail.js"></script>
+	<script type="text/javascript">
+
+
+		var $button = $(".button button");
+		var $required = $(".required")
+		function containsBlanks(){
+			var blanks = $required.map(function(){ return $(this).val() == "";});
+			return $.inArray(true, blanks) != -1;
+		}
+
+		function requiredFilledIn(){
+			if(containsBlanks() || !$("#email").validEmail()) 
+				$button.attr("disabled","disabled");
+			else 
+				$button.removeAttr("disabled");
+		}
+
+		$("#contactForm span").hide();
+		$("input,textarea").focus(function(){
+			$(this).next().fadeIn("slow");
+		}).blur(function(){
+			$(this).next().fadeOut("slow");
+		}).keyup(function(){
+			//Check all required fields.
+			requiredFilledIn();
+		});
+
+		$("#email").validEmail({on:"keyup", success:function(){
+			$(this).next().removeClass("error").addClass("valid");
+		}, failure:function(){
+			$(this).next().removeClass("valid").addClass("error");
+		}});
+
+		requiredFilledIn();
+	</script>
+
+	<!-- End jQuery Content -->
+
+
+</body>
+</html>
